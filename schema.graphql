@@ -1,0 +1,19 @@
+type Category @entity {
+  id: ID!
+  name: String!
+  description: String!
+  workClockTimeRef: BigInt!
+}
+
+type AppOrder @entity {
+  id: ID!
+  app: ID!
+  appprice: BigDecimal!
+  volume: BigInt
+  tag: Bytes
+  datasetrestrict: Bytes
+  workerpoolrestrict: Bytes
+  requesterrestrict: Bytes
+  salt: Bytes
+  sign: Bytes
+}
